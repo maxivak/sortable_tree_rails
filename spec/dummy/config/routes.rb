@@ -7,7 +7,6 @@ Rails.application.routes.draw do
 
   resources :categories do
     collection do
-      get :manage
       post :sort
     end
 
