@@ -7,7 +7,14 @@ gemspec
 
 gem 'haml-rails'
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 
+gem 'sass-rails'
+gem 'compass-rails'
+gem 'sprockets-rails'
+#gem 'bootstrap-sass'
+
+gem 'ancestry'
 
 # Declare any dependencies that are still in development here instead of in
 # your gemspec. These might include edge Rails or gems from your path or

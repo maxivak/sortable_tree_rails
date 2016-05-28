@@ -6,7 +6,11 @@ Rails.application.routes.draw do
   # root 'welcome#index'
 
   resources :categories do
-    post :sort
+    collection do
+      get :manage
+      post :sort
+    end
+
   end
 
 
