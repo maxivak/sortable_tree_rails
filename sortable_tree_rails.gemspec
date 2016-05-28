@@ -9,9 +9,9 @@ Gem::Specification.new do |s|
   s.version     = SortableTreeRails::VERSION
   s.authors     = ["Max Ivak"]
   s.email       = ["maxivak@gmail.com"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of SortableTreeRails."
-  s.description = "TODO: Description of SortableTreeRails."
+  s.homepage    = "https://github.com/maxivak/sortable_tree_rails"
+  s.summary     = "GUI for sortable tree with ancestry gem"
+  s.description = "GUI for sortable tree to manage data organized in tree with ancestry gem."
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "readme.md"]
