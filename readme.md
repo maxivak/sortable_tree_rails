@@ -20,7 +20,7 @@ Run page with the tree: `http://localhost:3000/categories/manage`.
 
 
 
-* Gemfile
+### Gemfile
 
 ```
 gem 'ancestry'
@@ -28,7 +28,7 @@ gem 'sortable_tree_rails'
 ```
 
 
-* routes
+### routes
 
 ```
 # config/routes.rb
@@ -43,7 +43,7 @@ end
 
 This page (sort_categories_path) will be used by the gem to update data after drag&drop.
 
-* model
+### model
 
 It assumes that your model has already fields in DB for ancestry.
 
@@ -62,7 +62,7 @@ end
 ```
 
 
-* Javascript
+### Javascript
 
 Include js files in your assets file application.js:
 
@@ -75,7 +75,7 @@ Include js files in your assets file application.js:
 
 ```
 
-* CSS
+### CSS
 
 Add CSS file to your styles.
 
@@ -90,7 +90,7 @@ for SCSS (app/assets/application.scss):
 ```
 
 
-* controller
+### controller
 
 ```
 class CategoriesController < ApplicationController
@@ -107,7 +107,7 @@ end
 
 ```
 
-* view
+### view
 
 ```
 # app/views/categories/manage.html.haml
