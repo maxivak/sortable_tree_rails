@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    sortable_tree_rails (0.0.1)
+    sortable_tree_rails (0.0.2)
       rails (~> 4.2.5.2)
 
 GEM
