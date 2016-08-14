@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20160528172947) do
     t.string   "name"
     t.text     "description"
     t.integer  "pos"
+    t.integer  "parent_id"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
     t.string   "ancestry"
