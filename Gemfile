@@ -5,6 +5,8 @@ source 'https://rubygems.org'
 # development dependencies will be added by default to the :development group.
 gemspec
 
+gem 'rails', '~>4.2'
+
 gem 'haml-rails'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'

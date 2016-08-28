@@ -1,8 +1,8 @@
 PATH
   remote: .
   specs:
-    sortable_tree_rails (0.0.2)
-      rails (~> 4.2.5.2)
+    sortable_tree_rails (0.0.3)
+      rails (~> 4.2)
 
 GEM
   remote: https://rubygems.org/
@@ -167,6 +167,7 @@ DEPENDENCIES
   haml-rails
   jquery-rails
   jquery-ui-rails
+  rails (~> 4.2)
   sass-rails
   sortable_tree_rails!
   sprockets-rails
@@ -174,4 +175,4 @@ DEPENDENCIES
   tzinfo-data
 
 BUNDLED WITH
-   1.11.2
+   1.12.5
