@@ -154,9 +154,7 @@ in controller:
   sortable_tree 'ClassName', {parent_method: 'parent', sorting_attribute: 'pos'}
 ```
 
-* :controls_partial - specify what partial view to use to show control links for each item in a tree. Set to nil to not show controls.
 
-Use local variable `item` in the partial view.
 
 
 ## Options for view
@@ -165,11 +163,22 @@ Use local variable `item` in the partial view.
 = render_sortable_tree(@items, {__options_here})
 ```
 
-* name_method - defined which model method (usually, a column name) will be used to show name (default: :name)
-* sort_url - URL used to update data after item is moved to a new position
-* max_levels - max levels to show in tree (default: 5)
+* :name_method - defined which model method (usually, a column name) will be used to show name (default: :name)
+* :sort_url - URL used to update data after item is moved to a new position
+* :max_levels - max levels to show in tree (default: 5)
+* :controls_partial - specify what partial view to use to show control links for each item in a tree. Set to nil to not show controls.
+
+Use local variable `item` in the partial view.
 
 
+* example of partial with controls.
+`_controls.html.haml`:
+
+```
+= link_to 'Edit', edit_category_url(item)
+= link_to 'Delete', category_url(item), :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+```
 
 # How it works
 
