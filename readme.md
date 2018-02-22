@@ -84,7 +84,7 @@ Change `application.js` to include jquery and jquery-ui (jquery-ui/sortable) if 
  
 
 
-v
+
 ### CSS
 
 Add CSS file to your styles.
