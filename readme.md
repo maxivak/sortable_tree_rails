@@ -169,7 +169,6 @@ in controller:
 * :max_levels - max levels to show in tree (default: 5)
 * :controls_partial - specify what partial view to use to show control links for each item in a tree. Set to nil to not show controls.
 
-Use local variable `item` in the partial view.
 
 
 * example.
@@ -186,8 +185,7 @@ Use local variable `item` in the partial view.
 = render_sortable_tree(@items, {name_method: :name, sort_url: sort_categories_url, max_levels: 5, controls_partial: 'controls'})
 ```
 
-
-* partial with controls:
+* partial with controls. Use local variable `item` in the partial view.
 
 `_controls.html.haml`:
 
