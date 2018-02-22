@@ -15,4 +15,5 @@
 //= require jquery-ui
 
 //=require jquery.mjs.nestedSortable.js
+//=require sortable_tree.js
 

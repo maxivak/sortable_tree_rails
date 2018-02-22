@@ -23,6 +23,9 @@ Run page with the tree: `http://localhost:3000/categories/manage`.
 ### Gemfile
 
 ```
+gem 'jquery-rails'
+gem "jquery-ui-rails"
+
 gem 'ancestry'
 gem 'sortable_tree_rails'
 ```
@@ -64,17 +67,24 @@ end
 
 ### Javascript
 
-Include js files in your assets file application.js:
+Include js files in your assets file `application.js`:
 
 ```
 //= require jquery2
-//= require jquery_ujs
+//= require jquery-ui
 
-//=require jquery-ui/sortable
 //=require jquery.mjs.nestedSortable.js
+//=require sortable_tree.js
+
 
 ```
 
+it depends on jquery and jquery-ui which come from gems 'jquery-rails', 'jquery-ui-rails'.
+Change `application.js` to include jquery and jquery-ui (jquery-ui/sortable) if you are not using these gems.
+ 
+
+
+v
 ### CSS
 
 Add CSS file to your styles.
@@ -194,6 +204,15 @@ in controller:
 = link_to 'Delete', category_url(item), :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 ```
+
+
+# Customize
+
+## customize view
+
+* edit file 'views/sortable/_sortable.html.haml' to access the whole layout
+
+
 
 
 
