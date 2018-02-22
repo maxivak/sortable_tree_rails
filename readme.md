@@ -195,10 +195,6 @@ in controller:
 
 ```
 
-use it for tree:
-```
-= render_sortable_tree(@items, {name_method: :name, sort_url: sort_categories_url, max_levels: 5, controls_partial: 'controls'})
-```
 
 
 # How it works
