@@ -157,6 +157,7 @@ in controller:
 
 
 
+
 ## Options for view
 
 ```
@@ -171,7 +172,23 @@ in controller:
 Use local variable `item` in the partial view.
 
 
-* example of partial with controls.
+* example.
+
+```
+= render_sortable_tree(@items, {name_method: :name, sort_url: sort_categories_url, max_levels: 5})
+```
+
+
+* example of partial view with controls.
+
+* main view:
+```
+= render_sortable_tree(@items, {name_method: :name, sort_url: sort_categories_url, max_levels: 5, controls_partial: 'controls'})
+```
+
+
+* partial with controls:
+
 `_controls.html.haml`:
 
 ```
@@ -179,6 +196,12 @@ Use local variable `item` in the partial view.
 = link_to 'Delete', category_url(item), :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 ```
+
+use it for tree:
+```
+= render_sortable_tree(@items, {name_method: :name, sort_url: sort_categories_url, max_levels: 5, controls_partial: 'controls'})
+```
+
 
 # How it works
 
