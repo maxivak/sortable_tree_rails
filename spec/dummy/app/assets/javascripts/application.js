@@ -12,8 +12,7 @@
 //
 
 //= require jquery2
-//= require jquery_ujs
+//= require jquery-ui
 
-//=require jquery-ui/sortable
 //=require jquery.mjs.nestedSortable.js
 

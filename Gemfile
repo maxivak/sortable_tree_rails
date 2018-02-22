@@ -5,16 +5,17 @@ source 'https://rubygems.org'
 # development dependencies will be added by default to the :development group.
 gemspec
 
-gem 'rails', '~>4.2'
+ruby "2.4.2"
 
-gem 'haml-rails'
-gem 'jquery-rails'
-gem 'jquery-ui-rails'
+gem 'rails', '5.1.3'
 
-gem 'sass-rails'
-gem 'compass-rails'
-gem 'sprockets-rails'
-#gem 'bootstrap-sass'
+
+gem 'haml-rails', '1.0.0'
+gem 'sass-rails', '~> 5.0.6'
+gem 'uglifier', '3.2.0'
+gem 'jquery-rails', '4.3.1'
+gem "jquery-ui-rails"
+gem 'font-awesome-rails', '~>4.7'
 
 gem 'ancestry'
 
@@ -26,4 +27,4 @@ gem 'ancestry'
 # To use a debugger
 # gem 'byebug', group: [:development, :test]
 
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data' #, platforms: [:mingw, :mswin, :x64_mingw, :jruby]
