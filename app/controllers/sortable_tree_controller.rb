@@ -15,9 +15,8 @@ module SortableTreeController
           resource_class = class_name.to_s.camelize.constantize
 
           # options
-          options[:tree] = true
-          options[:sorting_attribute] ||= 'pos'
-          options[:parent_method] ||= 'parent'
+          sorting_attribute = options.fetch(:sorting_attribute, 'pos')
+          parent_method = options[:parent_method] || 'parent'
 
           records = params[:cat].to_unsafe_h.inject({}) do |res, (resource, parent_resource)|
             res[resource_class.find(resource)] = resource_class.find(parent_resource) rescue nil
@@ -27,10 +26,12 @@ module SortableTreeController
           errors = []
           ActiveRecord::Base.transaction do
             records.each_with_index do |(record, parent_record), position|
-              record.send "#{options[:sorting_attribute]}=", position
-              if options[:tree]
-                record.send "#{options[:parent_method]}=", parent_record
+              if sorting_attribute
+                record.send "#{sorting_attribute}=", position
               end
+
+              record.send "#{parent_method}=", parent_record
+
               errors << {record.id => record.errors} if !record.save
             end
           end

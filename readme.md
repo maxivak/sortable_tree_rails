@@ -153,7 +153,7 @@ in controller:
 
 
 * ClassName - class name (camel case). For example, 'Category'.
-* :sorting_attribute - attribute used for sorting (default: 'pos')
+* :sorting_attribute - attribute used for sorting, set to `nil` to skip updates to a position attribute (default: 'pos')
 * :parent_method - method used to access parent for the item (default: 'parent')
 
 
