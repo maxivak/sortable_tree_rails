@@ -23,12 +23,16 @@ Run page with the tree: `http://localhost:3000/categories/manage`.
 ### Gemfile
 
 ```
+gem 'haml-rails'
+
 gem 'jquery-rails'
 gem "jquery-ui-rails"
 
 gem 'ancestry'
 gem 'sortable_tree_rails'
 ```
+
+* the gem uses HAML
 
 
 ### routes
@@ -153,18 +157,32 @@ in controller:
 
 
 * ClassName - class name (camel case). For example, 'Category'.
-* :sorting_attribute - attribute used for sorting (default: 'pos')
-* :parent_method - method used to access parent for the item (default: 'parent')
+* :sorting_attribute - attribute used for sorting. Set to nil to disable sorting.
+* :parent_method - method used to access parent for the item. Set to nil to disable tree (not updating parent).
 
+Examples.
 
-* If you use ancestry in model - set :parent_method to 'parent':
+* Example. For model with ancestry.
+If you use ancestry in model - set :parent_method to 'parent'.
 
 ```
   include SortableTreeController::Sort
   sortable_tree 'ClassName', {parent_method: 'parent', sorting_attribute: 'pos'}
 ```
 
+* Example. Do only sorting, without tree.
 
+```
+  include SortableTreeController::Sort
+  sortable_tree 'ClassName', {sorting_attribute: 'pos', parent_method: nil}
+```
+
+* Example. No sorting, update only parent.
+
+```
+  include SortableTreeController::Sort
+  sortable_tree 'ClassName', {sorting_attribute: nil, parent_method: 'parent'}
+```
 
 
 

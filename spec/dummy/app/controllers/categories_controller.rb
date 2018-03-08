@@ -6,7 +6,8 @@ class CategoriesController < ApplicationController
   end
 
   include SortableTreeController::Sort
-  sortable_tree 'Category', {parent_method: 'parent'}
+  sortable_tree 'Category', {parent_method: 'parent', sorting_attribute: 'pos'}
+  #sortable_tree 'Category', {parent_method: nil, sorting_attribute: nil}
 
   def manage
     # fix ancestry
