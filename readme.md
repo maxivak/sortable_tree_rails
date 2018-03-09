@@ -2,7 +2,7 @@
 
 GUI for sortable tree to manage data organized in tree with ancestry gem.
 
-Works with Rails 4.
+Works with Rails 5, Rails 4.
 
 
 # Overview
