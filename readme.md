@@ -230,7 +230,18 @@ If you use ancestry in model - set :parent_method to 'parent'.
 
 * edit file 'views/sortable/_sortable.html.haml' to access the whole layout
 
+# UUID support
 
+When using uuid instead of id, add this to `application.js`:
+```javascript
+$(document).ready(function() {
+  $('.sortable_tree').each(function () {
+    $(this).nestedSortable({
+      expression: /(.+)_(.+)/,
+    });
+  });
+});
+```
 
 
 
