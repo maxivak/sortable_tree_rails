@@ -11,12 +11,10 @@ module SortableTreeHelper
         content_tag(:li, {id: "cat_#{item.id}"} ) do
           #(item.title +  sortable_tree_render_nested_groups(sub_groups, opts)).html_safe
 
-          title = item.send(opts[:name_method] || :name) || ''
-
           s = content_tag(:div, {class: 'item'}) do
             (
                 #'<div class="cell left"><i class="handle"></i></div>'\
-                '<h3 class="cell left">'+title+'</h3>'\
+                '<h3 class="cell left">'+sortable_tree_build_show(item, opts)+'</h3>'\
               '<div class="cell right controls">'+sortable_tree_build_actions(item, opts)+'</div>'
             ).html_safe
           end
@@ -34,7 +32,16 @@ module SortableTreeHelper
     else
       return ""
     end
+  end
 
+  def sortable_tree_build_show(item, opts={})
+    partial = opts[:show_partial] || nil
+    if partial
+      return render :partial=>partial, locals: {item: item, options: opts}
+    else
+      title = item.send(opts[:name_method] || :name) || ''
+      return title
+    end
   end
 
 end
